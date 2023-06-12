@@ -3,6 +3,7 @@ import pandas as pd
 import subprocess
 import os
 
+# This script create data based on dev.tsv and train.tsv from DBABERT git example.
 
 DATA_DEV_PATH_INPUT = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\DNABERT\examples\sample_data\ft\6\dev.tsv"
 DATA_DEV_PATH_OUTPUT = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\DNABERT\examples\sample_data\ft\6_age\dev.tsv"
