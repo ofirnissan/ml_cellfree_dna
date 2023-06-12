@@ -1,0 +1,11 @@
+    9  sudo apt-get update
+   10  sudo apt-get install wget ca-certificates
+   11  cd /mnt/c/Users/ofirn/PycharmProjects/project1/venv/Scripts/Machine_Learning/DNABERT/examples/regression/   # GO TO YOUR FILE WITH OUR REPO
+   13  code .
+   16  python3 --version # MAKE SURE YOU HAVE PYTHON
+   17  sudo apt install python3-pip
+   18  sudo apt install python3-venv
+   20  pip install pysam 
+   24  sudo apt install samtools
+   25  samtools index 1000247.bam 
+   26  python3 parse_data.py 
