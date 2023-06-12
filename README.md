@@ -8,7 +8,7 @@
 
 ## Data:
 * Data files are the BAM files.
-* parse_data.py generates new tsv file that the DNABERT can work with, based on chosen data samples and metadata.
+* parse_data.py generates new tsv file that the DNABERT can work with, based on chosen data samples and metadata. You can use the output file of this script as an input data to DNABERT.
 
 ## For regression:
 * Right now the regression script just run the linear regression model on a tsv files (train + test). 
