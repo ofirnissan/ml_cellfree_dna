@@ -1,5 +1,8 @@
 # ml_cellfree_dna
 
+# NOTE:
+For now, all paths inside the scripts are hardcoded and need to be edit.
+
 ## Requirements:
 * clone https://github.com/jerryji1993/DNABERT/tree/master
 * install wsl, reset computer, set username and password
