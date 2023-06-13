@@ -2,6 +2,7 @@ import pysam
 import os
 import pandas as pd
 
+
 def sanity(path): # print first 10 rows of the BAM file
     # Index the BAM or SAM file
     if not os.path.exists(path + '.bai'):
