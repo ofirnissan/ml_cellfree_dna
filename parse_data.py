@@ -45,6 +45,7 @@ def split_seq_to_words(bamfil_path):
     for i, read in enumerate(splited_sequences):
         if i == 10:
             break
+
     # Tests
     #     print(f"Read {i+1}: {splited_sequences[i]}")
     # print(f"SEQ NUM IS: {len(splited_sequences)}")
@@ -97,7 +98,15 @@ def build_tsv_file_from_dataframes(metadata:dict):
     df.to_csv(f"data.tsv", sep='\t', index=False)
 
     
+
+def get_all_seq(path):
+    lst = split_seq_to_words(path)
+    return "".join(lst)
+
+
 # sanity("1000247.bam")
 # split_seq_to_words("1000247.bam")
 # generate_data_frame_from_sample("1000247.bam", {"Sex":"Male"})
-build_tsv_file_from_dataframes({"1000247.bam":{"label":"1"}, "1000273.bam":{"label":"0"}})
+# build_tsv_file_from_dataframes({"1000247.bam":{"label":"1"}, "1000273.bam":{"label":"0"}})
+
+
