@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # GLOBALS:
 TRAIN_DATA_PATH = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\DNABERT\examples\sample_data\ft\6_age\train.tsv"
 DEV_DATA_PATH = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\DNABERT\examples\sample_data\ft\6_age\dev.tsv"
-PREDICTIONS_OUTPUT = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\DNABERT\examples\regression\csv.csv"
+PREDICTIONS_OUTPUT = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\ml_cellfree_dna\regression\simple_regression_res.csv"
 # Set vocabulary to represent each subsequence by its index
 VOCAB_PATH = r"C:\Users\ofirn\PycharmProjects\project1\venv\Scripts\Machine_Learning\DNABERT\examples\sample_data\ft\6_age\vocab.txt"
 df_vocab = pd.read_csv(VOCAB_PATH, sep=' ')
@@ -81,17 +81,15 @@ def main():
     X, y = parse_sequence_from_data(DEV_DATA_PATH)
     predicted = model(X)
     # print loss:
-    print("TEST MSE LOSS:")
-    print(criterion(predicted, y).item())
+    print("TEST MSE LOSS: " + str(criterion(predicted, y).item()))
     y = y.numpy()
     predicted = predicted.detach().numpy()
     # plot as data frame table
     predicted = np.squeeze(np.asarray(predicted))
+    print(f"Prediction Mean: {np.average(predicted)}")
     y = np.squeeze(np.asarray(y))
     df = pd.DataFrame({'predicted':predicted, 'y':y})
     df.to_csv(PREDICTIONS_OUTPUT)
-
-
 
 
 

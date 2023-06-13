@@ -10,7 +10,7 @@ def regression_finetune():
           " --model_name_or_path /mnt/c/Users/ofirn/PycharmProjects/project1/venv/Scripts/Machine_Learning/DNABERT/examples/ft/6" \
           " --task_name dnaprom" \
           " --do_predict" \
-          " --data_dir /mnt/c/Users/ofirn/PycharmProjects/project1/venv/Scripts/Machine_Learning/DNABERT/examples/regression/try" \
+          " --data_dir /mnt/c/Users/ofirn/PycharmProjects/project1/venv/Scripts/Machine_Learning/ml_cellfree_dna/try" \
           " --max_seq_length 5 " \
           "--per_gpu_pred_batch_size=256" \
           " --output_dir /mnt/c/Users/ofirn/PycharmProjects/project1/venv/Scripts/Machine_Learning/DNABERT/examples/ft/6 " \
@@ -20,3 +20,6 @@ def regression_finetune():
         .format(PREDICT_DIR)
     result = subprocess.call(cmd.split())
     print(result)
+
+
+regression_finetune()
